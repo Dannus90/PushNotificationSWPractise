@@ -10,6 +10,7 @@ dotenv.config();
 const app = express()
 
 // Body parser middleware
+app.use(express.static(path.join(__dirname, "client")))
 app.use(bodyParser.json())
 
 // Telling who is sending the push notification
