@@ -1,11 +1,13 @@
 const express = require('express')
+const dotenv = require('dotenv');
 const webpush = require('web-push')
 const bodyParser = require('body-parser')
 const path = require('path')
 
-const app = express()
+// Make .env accessible
+dotenv.config();
 
-console.log(process.env.PRIVATE_VAPID_KEY)
+const app = express()
 
 const publicVapidKey = process.env.PUBLIC_VAPID_KEY
 const privateVapidKey = process.env.PRIVATE_VAPID_KEY
